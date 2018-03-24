@@ -23,6 +23,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/creative.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.min.css">
 
 </head>
 
@@ -41,13 +42,16 @@
                         <a class="nav-link js-scroll-trigger" href="#about">О нас</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                        <a class="nav-link js-scroll-trigger" href="#services">Услуги</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">Наши работы</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                        <a class="nav-link js-scroll-trigger" href="#license">Лицензия</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -100,21 +104,21 @@
                 <div class="col text-center">
                     <div class="service-box mt-5 mx-auto">
                         <img src="./img/icons/bc.svg" width="150" height="90" />
-                        <h3 class="my-3">Бизнес центры</h3>
+                        <h3 class="mb-3">Бизнес центры</h3>
                         <p class="text-muted mb-0">Надо придумать текст о том как тяжело проектировать бизнес центры</p>
                     </div>
                 </div>
                 <div class="col text-center">
                     <div class="service-box mt-5 mx-auto">
                         <img src="./img/icons/apartment.svg" width="150" height="90" />
-                        <h3 class="my-3">Жилые комплексы</h3>
+                        <h3 class="mb-3">Жилые комплексы</h3>
                         <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
                     </div>
                 </div>
                 <div class="col text-center">
                     <div class="service-box mt-5 mx-auto">
                         <img src="./img/icons/hospital.svg" width="150" height="100" />
-                        <h3 class="mb-3 mt-1">Общественные</h3>
+                        <h3 class="mb-3">Общественные</h3>
                         <p class="text-muted mb-0">You have to make your websites with love these days!</p>
                     </div>
                 </div>
@@ -123,21 +127,21 @@
                 <div class="col text-center">
                     <div class="service-box mt-5 mx-auto">
                         <img src="./img/icons/method-draw-image.svg" width="100" height="90" />
-                        <h3 class="my-3">Спорткомплексы</h3>
+                        <h3 class="mb-3">Спорткомплексы</h3>
                         <p class="text-muted mb-0">You have to make your websites with love these days!</p>
                     </div>
                 </div>
                 <div class="col text-center">
                     <div class="service-box mt-5 mx-auto">
                         <img src="./img/icons/factory.svg" width="150" height="90" />
-                        <h3 class="my-3">Производственные</h3>
+                        <h3 class="mb-3">Производственные</h3>
                         <p class="text-muted mb-0">Тут специфический текст относящися к проектированию бизнес центра </p>
                     </div>
                 </div>
                 <div class="col text-center">
                     <div class="service-box mt-5 mx-auto">
                         <img src="./img/icons/restoran.svg" width="90" height="90" />
-                        <h3 class="my-3">Кафе и рестораны</h3>
+                        <h3 class="mb-3">Кафе и рестораны</h3>
                         <p class="text-muted mb-0">Тут специфический текст относящися к проектированию бизнес центра </p>
                     </div>
                 </div>
@@ -242,7 +246,7 @@
         </div>
     </section>
 
-    <section class="bg-dark text-white">
+    <section id="license" class="bg-dark text-white">
         <div class="container text-center">
             <h2 class="mb-4">Государственная лицензия</h2>
             <div class="row mt-5">
@@ -281,7 +285,8 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section class="font-weight-bold pt-0" id="contact">
+        <div class="mb-5" id="map" style="height:500px;width:100%"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
@@ -296,11 +301,32 @@
                     <p>123-456-6789</p>
                 </div>
                 <div class="col-lg-4 mr-auto text-center">
+                    <form action="server.php">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Ваше имя*">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Ваш телефон*">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Ваш e-mail">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Площадь помещения">
+                        </div>
+                        <button class="btn btn-primary btn-block rounded" type="submit">Получить консультацию</button>
+                    </form>
+                </div>
+                <div class="col-lg-4 mr-auto text-center">
                     <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
                     <p>
                         <a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a>
                     </p>
                 </div>
+
             </div>
         </div>
     </section>
@@ -317,6 +343,31 @@
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
     <script src="js/common.js"></script>
+
+    <!-- maps -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap,
+            myPlacemark;
+
+        function init() {
+            myMap = new ymaps.Map("map", {
+                center: [51.170463, 71.420790],
+                zoom: 17
+            });
+
+            myPlacemark = new ymaps.Placemark([51.170463, 71.420790], {
+                hintContent: 'Это мы!',
+                balloonContent: 'Марден'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+            myMap.behaviors
+                .disable(['scrollZoom', 'multiTouch'])
+        }
+    </script>
 </body>
 
 </html>
